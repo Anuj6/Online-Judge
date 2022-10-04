@@ -1,0 +1,12 @@
+{%if problem_list%}
+    <ol>
+        {% for problem in problem_list%}
+            <li><a href= "{% url 'oj:problem_desc' problem.id %}">{{problem.problem_name}}</a></li>
+        {% endfor %}
+    </ol>
+{% else %}
+<p> No Problems are available</p>
+{% endif %}
+<body>
+    <a href ='logout'>Logout</a>
+</body>
